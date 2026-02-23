@@ -236,23 +236,40 @@ tbody tr:hover {
     font-style: italic;
 }
 
+
+
 /* Notification Banner */
 .notification-banner {
-    background: linear-gradient(90deg, MediumSlateBlue, DarkSlateBlue, MediumSlateBlue);
-    color: White;
-    padding: 20px 40px;
+    width: 100%;
+    padding: 12px 40px;
     text-align: center;
+    
+    font-size: 1.1rem;
     font-weight: 700;
-    font-size: 1.3rem;
     letter-spacing: 1px;
+    color: White;
+    
+    background: linear-gradient(90deg, MediumSlateBlue, DarkSlateBlue, MediumSlateBlue);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Neon glow effect for the notificaton banNer*/
     text-shadow: 
         0 0 5px GhostWhite,
         0 0 10px MediumSlateBlue,
         0 0 20px MediumSlateBlue,
         0 0 40px BlueViolet;
+        
     animation: slide 10s linear infinite;
 }
-
+/* Container needs overflow hidden so the banner doesn't stick out the corners */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px Gray;
+    overflow: hidden; 
+}
 @keyframes slide {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
