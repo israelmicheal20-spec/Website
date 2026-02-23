@@ -39,6 +39,7 @@ header h1 {
 .live-clock {
     font-size: 24px;
     font-weight: 500;
+    font-color: Greyblack;
     background: GhostWhite;
     padding: 10px 20px;
     border-radius: 50px;
@@ -183,5 +184,90 @@ table {
     margin-top: 20px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px LightGrey;
+    box-shadow: 0 5px 15px LightGrey;}
+Thead {
+    background: linear-gradient(135deg, MediumSlateBlue 0%, DarkSlateBlue 100%);
+    color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid WhiteSmoke;
+    transition: background 0.3s;
+}
+
+tbody tr:hover {
+    background: GhostWhite;
+}
+
+.top-student {
+    background: LemonChiffon;
+    font-weight: bold;
+}
+
+.top-student:hover {
+    background: Moccasin;
+}
+
+.delete-btn {
+    background: Crimson;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: FireBrick;
+}
+
+.no-data {
+    text-align: center;
+    color: Gray;
+    padding: 30px;
+    font-style: italic;
+}
+
+/* Notification Banner */
+.notification-banner {
+    background: linear-gradient(90deg, MediumSlateBlue, DarkSlateBlue, MediumSlateBlue);
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    font-weight: 500;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn-feature {
+        width: 100%;
+    }
+}
+
 
