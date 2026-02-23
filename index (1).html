@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Academic Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Academic Dashboard</h1>
+            <div class="live-clock" id="liveClock"></div>
+        </header>
+
+        <!-- Student Entry Form -->
+        <section class="form-section">
+            <h2>Student Marks Entry</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" placeholder="Enter student name">
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="regNo">Registration Number:</label>
+                    <input type="text" id="regNo" placeholder="e.g., BIT-001-2025">
+                    <small class="error" id="regError"></small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="catMarks">CAT Marks (0-30):</label>
+                        <input type="number" id="catMarks" min="0" max="30" step="0.1">
+                        <small class="error" id="catError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="examMarks">Exam Marks (0-70):</label>
+                        <input type="number" id="examMarks" min="0" max="70" step="0.1">
+                        <small class="error" id="examError"></small>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Add Student</button>
+                <button type="reset" class="btn-secondary">Clear Form</button>
+            </form>
+        </section>
+
+        <!-- Dashboard Controls -->
+        <section class="dashboard-controls">
+            <h2>Dashboard Features</h2>
+            <div class="button-group">
+                <button id="sortBtn" class="btn-feature"> Sort by Total Marks</button>
+                <button id="averageBtn" class="btn-feature"> Show Class Average</button>
+                <button id="highlightBtn" class="btn-feature"> Highlight Top Student</button>
+                <button id="statsBtn" class="btn-feature"> Show Pass/Fail Stats</button>
+            </div>
+            
+            <!-- Stats Display Area -->
+            <div id="statsDisplay" class="stats-display"></div>
+        </section>
+
+        <!-- Results Table -->
+        <section class="results-section">
+            <h2>Student Results</h2>
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Reg Number</th>
+                            <th>Total Marks</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Dynamic rows will appear here -->
+                    </tbody>
+                </table>
+            </div>
+            <p class="no-data" id="noDataMsg">No students added yet. Use the form above.</p>
+        </section>
+
+        <!-- Animated Counter Banner (Timer Feature) -->
+        <div class="notification-banner" id="notificationBanner">
+            <span id="bannerMessage"> Welcome to Academic Dashboard</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
