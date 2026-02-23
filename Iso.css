@@ -39,7 +39,7 @@ header h1 {
 .live-clock {
     font-size: 24px;
     font-weight: 500;
-    font-color: Greyblack;
+    color: Black;
     background: GhostWhite;
     padding: 10px 20px;
     border-radius: 50px;
@@ -184,7 +184,9 @@ table {
     margin-top: 20px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px LightGrey;}
+    box-shadow: 0 5px 15px LightGrey;
+}
+
 Thead {
     background: linear-gradient(135deg, MediumSlateBlue 0%, DarkSlateBlue 100%);
     color: white;
@@ -237,10 +239,17 @@ tbody tr:hover {
 /* Notification Banner */
 .notification-banner {
     background: linear-gradient(90deg, MediumSlateBlue, DarkSlateBlue, MediumSlateBlue);
-    color: white;
-    padding: 15px 40px;
+    color: White;
+    padding: 20px 40px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-shadow: 
+        0 0 5px GhostWhite,
+        0 0 10px MediumSlateBlue,
+        0 0 20px MediumSlateBlue,
+        0 0 40px BlueViolet;
     animation: slide 10s linear infinite;
 }
 
@@ -269,5 +278,3 @@ tbody tr:hover {
         width: 100%;
     }
 }
-
-
