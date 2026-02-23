@@ -1,0 +1,187 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, RoyalBlue 0%, Rebeccapurple 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px Gray;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, RoyalBlue 0%, Rebeccapurple 100%);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.live-clock {
+    font-size: 24px;
+    font-weight: 500;
+    background: GhostWhite;
+    padding: 10px 20px;
+    border-radius: 50px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Form Section */
+.form-section {
+    padding: 30px 40px;
+    border-bottom: 2px solid WhiteSmoke;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: DarkSlateGray;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: DimGray;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid Gainsboro;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: RoyalBlue;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.error {
+    color: Crimson;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+    min-height: 20px;
+}
+
+/* Button Styles */
+.btn-primary, .btn-secondary, .btn-feature {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, RoyalBlue 0%, Rebeccapurple 100%);
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px SteelBlue;
+}
+
+.btn-secondary {
+    background: WhiteSmoke;
+    color: DarkSlateGray;
+}
+
+.btn-secondary:hover {
+    background: Gainsboro;
+}
+
+.btn-feature {
+    background: white;
+    color: RoyalBlue;
+    border: 2px solid RoyalBlue;
+    margin: 5px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.btn-feature:hover {
+    background: linear-gradient(135deg, RoyalBlue 0%, Rebeccapurple 100%);
+    color: white;
+}
+
+/* Dashboard Controls */
+.dashboard-controls {
+    padding: 20px 40px;
+    border-bottom: 2px solid WhiteSmoke;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stats-display {
+    background: GhostWhite;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid RoyalBlue;
+    font-weight: 500;
+}
+
+/* Results Table */
+.results-section {
+    padding: 30px 40px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px LightGrey;
+
